@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            transition: 0.3s;
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        .modal-content.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <img src="img/sanca.mdm.jpeg" alt="Profile Picture" class="rounded-circle" width="150">
+        <h1 class="mt-3">Radityo Suryo Romadhoni</h1>
+        <p class="lead">Web Developer | Programmer</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>About Me</h2>
+                    <p>
+
+                    </p>
+                    <button id="cvButton" class="btn btn-primary">View CV</button>
+                </div>
+                <div class="col-lg-6">
+                    <h2>Skills</h2>
+                    <ul id="skill-list">
+                        <li class="skill-item">
+                            <button class="skill-button">HTML</button>
+                        </li>
+                        <li class="skill-item">
+                            <button class="skill-button">CSS</button>
+                        </li>
+                        <li class="skill-item">
+                            <button class="skill-button">Bootstrap</button>
+                        </li>
+                        <li class="skill-item">
+                            <button class="skill-button">PHP</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var buttons = document.querySelectorAll('.skill-button');
+                    
+                    buttons.forEach(function(button) {
+                        // Set initial styles
+                        button.style.backgroundColor = '#007bff';
+                        button.style.color = 'white';
+                        button.style.border = 'none';
+                        button.style.padding = '10px 20px';
+                        button.style.borderRadius = '5px';
+                        button.style.fontSize = '16px';
+                        button.style.cursor = 'pointer';
+                        button.style.transition = 'background-color 0.3s ease';
+                
+                        // Set hover effect
+                        button.addEventListener('mouseover', function() {
+                            button.style.backgroundColor = '#0056b3';
+                        });
+                
+                        button.addEventListener('mouseout', function() {
+                            button.style.backgroundColor = '#007bff';
+                        });
+                    });
+                });
+                </script>
+                
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="cvModal" class="modal">
+            <span class="close" title="Close Modal">&times;</span>
+            <img class="modal-content" id="cvImage" src="img/cv-image.jpg" alt="CV Image">
+        </div>
+    </section>
+
+    <section id="experience" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Experience</h2>
+            <div class="experience-list text-center">
+                <p>Pelatihan Robotik di STTW, 2022</p>
+                <p>Pelatihan Elektronika di STTW, 2023</p>
+                <p>Humas Karang Taruna, Periode 2021-2023</p>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/home.jpeg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Motor</h5>
+                            <p class="card-text">A brief description of your project.</p>
+                            <a href="motor.html" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/coding2.jpeg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Coding</h5>
+                            <p class="card-text">A brief description of your project.</p>
+                            <a href="coding.html" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/project3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">A brief description of your project.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <div class="contact-links text-center">
+                <p>You can reach me through:</p>
+                <a href="https://wa.me/yourphonenumber" class="btn btn-success" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/yourprofile" class="btn btn-danger" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@rsdiit" class="btn btn-dark" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("cvModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("cvButton");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+            setTimeout(function() {
+                document.getElementById("cvImage").classList.add("show");
+            }, 10);
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            document.getElementById("cvImage").classList.remove("show");
+            setTimeout(function() {
+                modal.style.display = "none";
+            }, 300);
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                document.getElementById("cvImage").classList.remove("show");
+                setTimeout(function() {
+                    modal.style.display = "none";
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>
