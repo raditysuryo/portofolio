@@ -1,0 +1,117 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: url('../img/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+header img {
+    border: 5px solid white;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #343a40;
+}
+
+.experience-list p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-links a {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.skills-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.skills-list li i {
+    margin-right: 10px;
+}
+
+.contact-links .btn-success {
+    background-color: #25d366; /* Warna WhatsApp */
+}
+
+.contact-links .btn-success:hover {
+    background-color: #1ebd57;
+}
+
+.contact-links .btn-danger {
+    background-color: #E1306C; /* Warna Instagram */
+}
+
+.contact-links .btn-danger:hover {
+    background-color: #C13584;
+}
+
+.contact-links .btn-dark {
+    background-color: #010101; /* Warna TikTok */
+}
+
+.contact-links .btn-dark:hover {
+    background-color: #0d0d0d;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: 5% auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
